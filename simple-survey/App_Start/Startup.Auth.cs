@@ -21,12 +21,12 @@ namespace MobilityMaturityWebApp
 
         public static string PublicClientId { get; private set; }
 
-        private static string clientId = ConfigurationManager.AppSettings["ida:ClientId"];
-        private static string aadInstance = ConfigurationManager.AppSettings["ida:AADInstance"];
-        private static string tenant = ConfigurationManager.AppSettings["ida:Tenant"];
-        private static string clientrealm = ConfigurationManager.AppSettings["AADClientRealm"];
+        //private static string clientId = ConfigurationManager.AppSettings["ida:ClientId"];
+        //private static string aadInstance = ConfigurationManager.AppSettings["ida:AADInstance"];
+        //private static string tenant = ConfigurationManager.AppSettings["ida:Tenant"];
+        //private static string clientrealm = ConfigurationManager.AppSettings["AADClientRealm"];
         //private static string appKey = ConfigurationManager.AppSettings["ida:AppKey"];
-        public static readonly string Authority = String.Format(CultureInfo.InvariantCulture, aadInstance, tenant);
+        //public static readonly string Authority = String.Format(CultureInfo.InvariantCulture, aadInstance, tenant);
 
 
         public void ConfigureAuth(IAppBuilder app)
