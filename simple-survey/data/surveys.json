@@ -1,0 +1,25 @@
+{
+    "surveys": [
+        {
+            "questions":[
+                {
+                    "question": "Ask me somthing",
+                    "type": "bool",
+                    "values": null
+                },
+                {
+                    "question": "Ask me to rate something by number",
+                    "type": "slider",
+                    "valuetype": "int",
+                    "values": [1, 2, 3]
+                },
+                {
+                    "question": "Ask me to rate somthing with words",
+                    "type": "slider",
+                    "valuetype": "string",
+                    "values": ["Pig", "Kuttns", "Snake"]
+                }
+            ]
+        }
+    ]
+}
