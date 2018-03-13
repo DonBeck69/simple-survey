@@ -1,0 +1,10 @@
+﻿/.vs
+/DataAccess
+/simple-survey/obj
+/simple-survey/bin
+/UnitTests/bin
+/UnitTests/obj
+/packages
+/dist
+/simple-survey/node_modules
+.sass-cache
