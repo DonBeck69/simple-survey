@@ -1,4 +1,5 @@
 ﻿/.vs
+/.vscode
 /DataAccess
 /simple-survey/obj
 /simple-survey/bin

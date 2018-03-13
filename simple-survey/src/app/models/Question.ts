@@ -1,5 +1,5 @@
 export class Question {
-    public Question: string;
+    public Copy: string;
     public Type: string;
     public ValueType: string;
     public StringArrayValues: string[];
