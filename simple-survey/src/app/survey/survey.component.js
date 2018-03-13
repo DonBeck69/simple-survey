@@ -15,13 +15,13 @@ var SurveyComponent = (function () {
     }
     SurveyComponent.prototype.ngOnInit = function () {
     };
+    SurveyComponent = __decorate([
+        core_1.Component({
+            selector: 'survey',
+            templateUrl: 'survey.html'
+        }),
+        __metadata("design:paramtypes", [])
+    ], SurveyComponent);
     return SurveyComponent;
 }());
-SurveyComponent = __decorate([
-    core_1.Component({
-        selector: 'assessment',
-        templateUrl: 'assessment.html'
-    }),
-    __metadata("design:paramtypes", [])
-], SurveyComponent);
 exports.SurveyComponent = SurveyComponent;

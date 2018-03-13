@@ -17,21 +17,21 @@ var participant_component_1 = require("./participant/participant.component");
 var SurveyModule = (function () {
     function SurveyModule() {
     }
+    SurveyModule = __decorate([
+        core_1.NgModule({
+            declarations: [
+                participant_component_1.ParticipantComponent
+            ],
+            imports: [
+                common_1.CommonModule,
+                forms_1.FormsModule,
+                router_1.RouterModule,
+                ng2_charts_1.ChartsModule,
+                ngx_carousel_1.NgxCarouselModule
+            ],
+            providers: []
+        })
+    ], SurveyModule);
     return SurveyModule;
 }());
-SurveyModule = __decorate([
-    core_1.NgModule({
-        declarations: [
-            participant_component_1.ParticipantComponent
-        ],
-        imports: [
-            common_1.CommonModule,
-            forms_1.FormsModule,
-            router_1.RouterModule,
-            ng2_charts_1.ChartsModule,
-            ngx_carousel_1.NgxCarouselModule
-        ],
-        providers: []
-    })
-], SurveyModule);
 exports.SurveyModule = SurveyModule;

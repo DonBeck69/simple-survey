@@ -2,6 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { WelcomeComponent } from './welcome/welcome.component';
 import { SurveyComponent } from './survey/survey.component';
+import { SurveyRouting } from './survey/survey.routing';
 
 const APP_ROUTES: Routes = [
     {
@@ -11,7 +12,7 @@ const APP_ROUTES: Routes = [
     {
         path: 'assessment',
         component: SurveyComponent,
-        //children: AssessmentRouting
+        children: SurveyRouting
     }
 ];
 

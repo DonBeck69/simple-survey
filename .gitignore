@@ -1,0 +1,7 @@
+/simple-survey/bin
+/simple-survey/obj
+/simple-survey/node_modules
+/UnitTests/bin
+/UnitTests/obj
+/packages
+/.vs

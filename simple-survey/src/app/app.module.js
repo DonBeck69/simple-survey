@@ -15,32 +15,34 @@ var http_1 = require("@angular/common/http");
 var forms_1 = require("@angular/forms");
 var app_routing_1 = require("./app.routing");
 var app_component_1 = require("./app.component");
+var welcome_component_1 = require("./welcome/welcome.component");
 var survey_component_1 = require("./survey/survey.component");
 var copy_service_1 = require("./services/copy.service");
 var app_config_service_1 = require("./app.config.service");
 var AppModule = (function () {
     function AppModule() {
     }
+    AppModule = __decorate([
+        core_1.NgModule({
+            declarations: [
+                app_component_1.AppComponent,
+                survey_component_1.SurveyComponent,
+                welcome_component_1.WelcomeComponent
+            ],
+            imports: [
+                platform_browser_1.BrowserModule,
+                http_1.HttpClientModule,
+                forms_1.FormsModule,
+                app_routing_1.AppRouting
+            ],
+            providers: [
+                copy_service_1.CopyService,
+                app_config_service_1.AppConfig
+            ],
+            bootstrap: [app_component_1.AppComponent]
+        }),
+        __metadata("design:paramtypes", [])
+    ], AppModule);
     return AppModule;
 }());
-AppModule = __decorate([
-    core_1.NgModule({
-        declarations: [
-            app_component_1.AppComponent,
-            survey_component_1.SurveyComponent
-        ],
-        imports: [
-            platform_browser_1.BrowserModule,
-            http_1.HttpClientModule,
-            forms_1.FormsModule,
-            app_routing_1.AppRouting
-        ],
-        providers: [
-            copy_service_1.CopyService,
-            app_config_service_1.AppConfig
-        ],
-        bootstrap: [app_component_1.AppComponent]
-    }),
-    __metadata("design:paramtypes", [])
-], AppModule);
 exports.AppModule = AppModule;

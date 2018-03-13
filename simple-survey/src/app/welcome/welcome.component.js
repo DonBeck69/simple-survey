@@ -18,23 +18,19 @@ var WelcomeComponent = (function () {
         this.router = router;
     }
     WelcomeComponent.prototype.ngOnInit = function () {
-        this.welcomeGrid = this.copyService.WelcomeCopy.WelcomeGrid;
         this.banner = this.copyService.WelcomeCopy.Banner;
-        this.mobilitySummary = this.copyService.WelcomeCopy.MobilitySummary;
-        this.assessmentSummary = this.copyService.WelcomeCopy.AssessmentSummary;
-        this.resultsSummary = this.copyService.WelcomeCopy.ResultsSummary;
     };
     WelcomeComponent.prototype.newAssessment = function () {
         this.router.navigate(['/assessment', 'employees']);
     };
+    WelcomeComponent = __decorate([
+        core_1.Component({
+            selector: 'welcome',
+            templateUrl: './welcome.html'
+        }),
+        __metadata("design:paramtypes", [copy_service_1.CopyService,
+            router_1.Router])
+    ], WelcomeComponent);
     return WelcomeComponent;
 }());
-WelcomeComponent = __decorate([
-    core_1.Component({
-        selector: 'welcome',
-        templateUrl: './welcome.html'
-    }),
-    __metadata("design:paramtypes", [copy_service_1.CopyService,
-        router_1.Router])
-], WelcomeComponent);
 exports.WelcomeComponent = WelcomeComponent;

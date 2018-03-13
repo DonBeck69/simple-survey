@@ -13,7 +13,6 @@ var core_1 = require("@angular/core");
 var http_1 = require("@angular/common/http");
 require("rxjs/Rx");
 var rxjs_1 = require("rxjs");
-var Copy = require("../../data/copy.json");
 var WelcomeCopy = require("../../data/Welcome.json");
 var app_config_service_1 = require("../app.config.service");
 var CopyService = (function () {
@@ -21,7 +20,6 @@ var CopyService = (function () {
         this.http = http;
         this.appConfig = appConfig;
         this.getDeviceUrl = this.appConfig.apiUrl + 'api/Device/';
-        this.Copy = Copy;
         this.WelcomeCopy = WelcomeCopy;
     }
     CopyService.prototype.getDevices = function () {
@@ -38,11 +36,11 @@ var CopyService = (function () {
         console.error('An error occurred', error);
         return Promise.reject(error.message || error);
     };
+    CopyService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [http_1.HttpClient,
+            app_config_service_1.AppConfig])
+    ], CopyService);
     return CopyService;
 }());
-CopyService = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [http_1.HttpClient,
-        app_config_service_1.AppConfig])
-], CopyService);
 exports.CopyService = CopyService;

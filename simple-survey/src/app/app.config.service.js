@@ -9,11 +9,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AppConfig = (function () {
     function AppConfig() {
-        this.apiUrl = 'https://mobility-maturity-dashboard-dev.azurewebsites.net/';
+        this.apiUrl = 'https://localhost:51887/';
     }
+    AppConfig = __decorate([
+        core_1.Injectable()
+    ], AppConfig);
     return AppConfig;
 }());
-AppConfig = __decorate([
-    core_1.Injectable()
-], AppConfig);
 exports.AppConfig = AppConfig;

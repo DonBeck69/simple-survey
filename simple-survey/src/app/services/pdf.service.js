@@ -61,10 +61,10 @@ var PdfService = (function () {
     PdfService.prototype.handleError = function (error) {
         return Promise.reject(error.message || error);
     };
+    PdfService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [http_1.HttpClient])
+    ], PdfService);
     return PdfService;
 }());
-PdfService = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [http_1.HttpClient])
-], PdfService);
 exports.PdfService = PdfService;

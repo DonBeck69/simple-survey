@@ -19,17 +19,17 @@ var ParticipantComponent = (function () {
         this.route = route;
     }
     ParticipantComponent.prototype.ngOnInit = function () {
-        this.copy = this.copyService.Copy.Employee;
+        this.copy = this.copyService.Copy;
     };
+    ParticipantComponent = __decorate([
+        core_1.Component({
+            selector: 'participant',
+            templateUrl: './participant.html'
+        }),
+        __metadata("design:paramtypes", [copy_service_1.CopyService,
+            router_1.Router,
+            router_1.ActivatedRoute])
+    ], ParticipantComponent);
     return ParticipantComponent;
 }());
-ParticipantComponent = __decorate([
-    core_1.Component({
-        selector: 'assess-employees',
-        templateUrl: './employees.html'
-    }),
-    __metadata("design:paramtypes", [copy_service_1.CopyService,
-        router_1.Router,
-        router_1.ActivatedRoute])
-], ParticipantComponent);
 exports.ParticipantComponent = ParticipantComponent;
