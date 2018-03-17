@@ -1,35 +1,33 @@
-import {Injectable} from '@angular/core';
-import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
-import 'rxjs/Rx';
-import {Observable} from 'rxjs';
-//import { Capabilities } from '../objects/Capabilities';
-//import * as Copy from '../../data/copy.json';
-import * as WelcomeCopy from '../../data/Welcome.json';
-import { AppConfig } from '../app.config.service';
+import {Injectable} from "@angular/core";
+import { HttpClient, HttpHeaders, HttpResponse } from "@angular/common/http";
+import "rxjs/Rx";
+import {Observable} from "rxjs";
+import * as Copy from "../../data/copy.json";
+import * as WelcomeCopy from "../../data/Welcome.json";
+import { AppConfig } from "../app.config.service";
 
 @Injectable()
 
 export class CopyService {
     constructor(
-      private http: HttpClient, 
+      private http: HttpClient,
       private appConfig: AppConfig
     ) {
-    //this.Copy = Copy;
+    this.Copy = Copy;
     this.WelcomeCopy = WelcomeCopy;
     //this.appCo
     //this.appConfig = AppConfig;
   }
 
-  //private appConfig: AppConfig;
+  // private appConfig: AppConfig;
 
-  //settings in app.config.ts
-  private getDeviceUrl = this.appConfig.apiUrl + 'api/Device/';
-  
+  // settings in app.config.ts
+  private getDeviceUrl = this.appConfig.apiUrl + "api/Device/";
   public Copy: any;
   public WelcomeCopy: any;
-  public DeviceCopy: any;
-  
-  getDevices() {
+
+  /*
+  public getDevices(): Promise<any> {
       return this.http.get<any>(this.getDeviceUrl)
         .toPromise()
           .then(res => {
@@ -38,9 +36,9 @@ export class CopyService {
           })
           .catch((error: Response) => Observable.throw(error.json()));
   }
-
+*/
   private handleError(error: any): Promise<any> {
-    console.error('An error occurred', error); // for demo purposes only
+    console.error("An error occurred", error); // for demo purposes only
     return Promise.reject(error.message || error);
   }
 
