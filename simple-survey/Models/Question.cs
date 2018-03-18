@@ -16,11 +16,9 @@ public class Question
     {
 
     }
-    public string Copy { get; set;  }
-    public string Type { get; set; }
-    public string ValueType  { get; set;  }
-    public List<string> StringArrayValues { get; set; }
-    public List<int> ArrayValues { get; set; }
 
+    public int QuestionId { get; set; }
+    public int SurveyId { get; set; }
+    public string QuestionData { get; set; } 
 
 }

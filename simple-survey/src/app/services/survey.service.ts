@@ -12,21 +12,21 @@ export class SurveyService {
 
   //private headers: HttpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-  public Assessment: Assessment;
+  //public Assessment: Assessment;
   //public Results: Results;
   //public fromAdmin = false;
-  private navLinks = this.headerService.navLinks;
+  //private navLinks = this.headerService.navLinks;
 
   constructor(
       private http: HttpClient,
-      private headerService: HeaderService,
+      //private headerService: HeaderService,
       private appConfig: AppConfig
   ) {}
 
   //settings in app.config.ts
   private resultsApiUrl = this.appConfig.apiUrl + 'api/Results/';
   private assessmentApiUrl = this.appConfig.apiUrl + 'api/Assessment/';
-
+/*
   //post assessment to api to generate results
   public PostResults(assessment: Assessment): Promise<Results> {
       return this.http.post<Results>(this.resultsApiUrl, JSON.stringify(assessment), { headers: this.headers })
@@ -82,34 +82,13 @@ export class SurveyService {
       sessionStorage.setItem('CurrentPage', page);
   }
 
-  public sortNav(){
-      const currentPage = sessionStorage.getItem('CurrentPage');
-      let links = this.headerService.navLinks;
-      for(var i = 0;i < links.length; i++ ){
-          links[i].active = false;
-          links[i].visited = true;
-          if(links[i].url === currentPage){
-              links[i].active = true;
-              break;
-          }
-      }
-  }
+
 
   public clearStorage(){
       sessionStorage.clear();
   }
 
-  public resetAssessment(){
-      this.Assessment = new Assessment();
-      this.fromAdmin = false;
-      let links = this.headerService.navLinks;
-      for(var i = 0;i < links.length; i++ ){
-          links[i].active = false;
-          links[i].visited = false;
-      }
-      links[0].active = true;
-      sessionStorage.clear();
-  }
+*/
   private handleError(error: Response): Promise<any> {
       console.error(error); // for demo purposes only
       return Promise.reject(error);

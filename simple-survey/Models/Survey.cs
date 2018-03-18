@@ -9,7 +9,11 @@ namespace MobilityMaturityWebApp.Models
     {
 
         public Survey() { }
+        public int SurveyId { get; set; }
+        public int UserId { get; set; }
         public string SurveyName { get; set; }
+
+        public string Description { get; set; }
         public List<Question> Questions { get; set; }
 
 
