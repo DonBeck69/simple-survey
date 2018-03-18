@@ -14,7 +14,7 @@ namespace MobilityMaturityWebApp.Models
         public string SurveyName { get; set; }
 
         public string Description { get; set; }
-        public List<Question> Questions { get; set; }
+        public string Questions { get; set; }
 
 
 
