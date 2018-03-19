@@ -10,18 +10,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var SurveyComponent = (function () {
-    function SurveyComponent() {
+var BoolQuestionDirective = (function () {
+    function BoolQuestionDirective() {
     }
-    SurveyComponent.prototype.ngOnInit = function () {
-    };
-    SurveyComponent = __decorate([
-        core_1.Component({
-            selector: 'survey',
-            templateUrl: 'survey.html'
+    BoolQuestionDirective = __decorate([
+        core_1.Directive({
+            selector: '[appBoolQuestion]'
         }),
         __metadata("design:paramtypes", [])
-    ], SurveyComponent);
-    return SurveyComponent;
+    ], BoolQuestionDirective);
+    return BoolQuestionDirective;
 }());
-exports.SurveyComponent = SurveyComponent;
+exports.BoolQuestionDirective = BoolQuestionDirective;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace MobilityMaturityWebApp.Models
+namespace SimpleSurvey.Models
 {
     public class Survey
     {

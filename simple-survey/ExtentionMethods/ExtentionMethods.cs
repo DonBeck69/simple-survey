@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MobilityMaturityWebApp.ExtentionMethods
+namespace SimpleSurvey.ExtentionMethods
 {
     public static class ExtentionMethods
     {

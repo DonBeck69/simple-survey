@@ -10,18 +10,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var SurveyComponent = (function () {
-    function SurveyComponent() {
+var http_1 = require("@angular/common/http");
+var app_config_service_1 = require("../app.config.service");
+var SurveyService = (function () {
+    function SurveyService(http, appConfig) {
+        this.http = http;
+        this.appConfig = appConfig;
+        this.resultsApiUrl = this.appConfig.apiUrl + 'api/Results/';
+        this.assessmentApiUrl = this.appConfig.apiUrl + 'api/Assessment/';
     }
-    SurveyComponent.prototype.ngOnInit = function () {
+    SurveyService.prototype.handleError = function (error) {
+        console.error(error);
+        return Promise.reject(error);
     };
-    SurveyComponent = __decorate([
-        core_1.Component({
-            selector: 'survey',
-            templateUrl: 'survey.html'
-        }),
-        __metadata("design:paramtypes", [])
-    ], SurveyComponent);
-    return SurveyComponent;
+    SurveyService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [http_1.HttpClient,
+            app_config_service_1.AppConfig])
+    ], SurveyService);
+    return SurveyService;
 }());
-exports.SurveyComponent = SurveyComponent;
+exports.SurveyService = SurveyService;

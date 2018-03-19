@@ -5,14 +5,15 @@ using System.Web;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;
+using SimpleSurvey.Models;
 
-namespace MobilityMaturityWebApp
+namespace SimpleSurvey
 {
     public class DataContext : DbContext
     {
-        //public DbSet<SavedAssessment> Assessments { get; set; }
-        //public DbSet<SelectedCapability> Capabilities { get; set; }
-        ////public DbSet<SavedResult> Results { get; set; }
+        public DbSet<UserData> UserData { get; set; }
+        public DbSet<Survey> Survey { get; set; }
+        public DbSet<Results> Results { get; set; }
         //public DbSet<SavedDeviceScore> DeviceScores { get; set; }
         //public DbSet<Profile> Profiles { get; set; }
         //public DbSet<AdminUser> AdminUsers { get; set; }

@@ -1,18 +1,19 @@
-namespace MobilityMaturityWebApp.Migrations
+namespace SimpleSurvey.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using SimpleSurvey;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<MobilityMaturityWebApp.DataContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<DataContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(MobilityMaturityWebApp.DataContext context)
+        protected override void Seed(DataContext context)
         {
             //  This method will be called after migrating to the latest version.
 

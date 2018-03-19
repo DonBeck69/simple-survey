@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-require("./css/scss/main.scss");
 var core_1 = require("@angular/core");
 core_1.enableProdMode();
 var platform_browser_dynamic_1 = require("@angular/platform-browser-dynamic");

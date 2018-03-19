@@ -32,14 +32,14 @@ var AppComponent = (function () {
         var url = this.domSanitizer.bypassSecurityTrustUrl(imgUrl);
         return url;
     };
+    AppComponent = __decorate([
+        core_1.Component({
+            selector: 'my-app',
+            templateUrl: './app.component.html',
+        }),
+        __metadata("design:paramtypes", [router_1.Router,
+            platform_browser_1.DomSanitizer])
+    ], AppComponent);
     return AppComponent;
 }());
-AppComponent = __decorate([
-    core_1.Component({
-        selector: 'my-app',
-        templateUrl: './app.component.html',
-    }),
-    __metadata("design:paramtypes", [router_1.Router,
-        platform_browser_1.DomSanitizer])
-], AppComponent);
 exports.AppComponent = AppComponent;
