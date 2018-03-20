@@ -128,72 +128,27 @@
     <Content Include="Global.asax" />
     <Content Include="postcss.config.js" />
     <Content Include="src\app\app.component.html" />
+    <Content Include="src\app\app.component.js" />
+    <Content Include="src\app\app.config.service.js" />
+    <Content Include="src\app\app.module.js" />
+    <Content Include="src\app\app.routing.js" />
+    <Content Include="src\app\directives\BoolQuestion.directive.js" />
     <Content Include="src\app\models\Profile.js" />
+    <Content Include="src\app\models\Question.js" />
+    <Content Include="src\app\models\Survey.js" />
+    <Content Include="src\app\services\copy.service.js" />
+    <Content Include="src\app\services\survey.service.js" />
+    <Content Include="src\app\survey\participant\participant.component.js" />
+    <Content Include="src\app\survey\survey.component.js" />
     <Content Include="src\app\survey\survey.html" />
     <Content Include="src\app\survey\participant\participant.html" />
+    <Content Include="src\app\survey\survey.module.js" />
+    <Content Include="src\app\survey\survey.routing.js" />
     <Content Include="src\app\welcome\welcome.html" />
-    <Content Include="src\assets\ms-logo.svg" />
-    <Content Include="src\assets\personas\clinician.png" />
-    <Content Include="src\assets\personas\creatives.jpg" />
-    <Content Include="src\assets\personas\developer.jpg" />
-    <Content Include="src\assets\personas\engineer.jpg" />
-    <Content Include="src\assets\personas\executive.jpg" />
-    <Content Include="src\assets\personas\field-worker.jpg" />
-    <Content Include="src\assets\personas\healthcare-provider.jpg" />
-    <Content Include="src\assets\personas\hr.jpg" />
-    <Content Include="src\assets\personas\information-worker.jpg" />
-    <Content Include="src\assets\personas\it.jpg" />
-    <Content Include="src\assets\personas\marketing.jpg" />
-    <Content Include="src\assets\personas\sales.jpg" />
-    <Content Include="src\assets\personas\teacher.jpg" />
-    <Content Include="src\assets\products\SB-LTE\LTE-1.png" />
-    <Content Include="src\assets\products\SB-LTE\LTE-2.png" />
-    <Content Include="src\assets\products\SB-LTE\LTE-3.png" />
-    <Content Include="src\assets\products\SB-LTE\LTE-4.png" />
-    <Content Include="src\assets\products\SB-Perf\SB-Perf-1.png" />
-    <Content Include="src\assets\products\SB-Perf\SB-Perf-2.png" />
-    <Content Include="src\assets\products\SB-Perf\SB-Perf-3.png" />
-    <Content Include="src\assets\products\SB-Perf\SB-Perf-4.png" />
-    <Content Include="src\assets\products\SB2-13\SB2-13-1.png" />
-    <Content Include="src\assets\products\SB2-13\SB2-13-2.png" />
-    <Content Include="src\assets\products\SB2-13\SB2-13-3.png" />
-    <Content Include="src\assets\products\SB2-13\SB2-13-4.png" />
-    <Content Include="src\assets\products\SB2-15\SB2-15-1.png" />
-    <Content Include="src\assets\products\SB2-15\SB2-15-2.png" />
-    <Content Include="src\assets\products\SB2-15\SB2-15-3.png" />
-    <Content Include="src\assets\products\SB2-15\SB2-15-4.png" />
-    <Content Include="src\assets\products\SB\SB-1.png" />
-    <Content Include="src\assets\products\SB\SB-2.png" />
-    <Content Include="src\assets\products\SB\SB-3.png" />
-    <Content Include="src\assets\products\SB\SB-4.png" />
-    <Content Include="src\assets\products\SH\SH-1.png" />
-    <Content Include="src\assets\products\SH\SH-2.png" />
-    <Content Include="src\assets\products\SH\SH-3.png" />
-    <Content Include="src\assets\products\SH\SH-4.png" />
-    <Content Include="src\assets\products\SL\SL-1.png" />
-    <Content Include="src\assets\products\SL\SL-2.png" />
-    <Content Include="src\assets\products\SL\SL-3.png" />
-    <Content Include="src\assets\products\SL\SL-4.png" />
-    <Content Include="src\assets\products\SP\SP-1.png" />
-    <Content Include="src\assets\products\SP\SP-2.png" />
-    <Content Include="src\assets\products\SP\SP-3.png" />
-    <Content Include="src\assets\products\SP\SP-4.png" />
-    <Content Include="src\assets\products\SS\SS-1.png" />
-    <Content Include="src\assets\products\SS\SS-2.png" />
-    <Content Include="src\assets\products\SS\SS-3.png" />
-    <Content Include="src\assets\products\SS\SS-4.png" />
-    <Content Include="src\assets\results\new.png" />
-    <Content Include="src\assets\results\share.png" />
-    <Content Include="src\assets\results\touch.png" />
-    <Content Include="src\assets\welcome\assess-summary.png" />
-    <Content Include="src\assets\welcome\assess-team.png" />
-    <Content Include="src\assets\welcome\mobility-component.png" />
-    <Content Include="src\assets\welcome\modernize.png" />
-    <Content Include="src\assets\welcome\results-summary.png" />
-    <Content Include="src\assets\welcome\screenshot.png" />
-    <Content Include="src\assets\welcome\welcome-banner-middle.png" />
-    <Content Include="src\assets\welcome\welcome-banner.png" />
     <Content Include="src\index.html" />
+    <Content Include="src\main.dev.js" />
+    <Content Include="src\main.js" />
+    <Content Include="src\polyfills.js" />
     <Content Include="styles.css" />
     <Content Include="Web.config" />
     <Content Include="webpack.config.dev.js" />
@@ -212,9 +167,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803190158223_Start.cs" />
-    <Compile Include="Migrations\201803190158223_Start.Designer.cs">
-      <DependentUpon>201803190158223_Start.cs</DependentUpon>
+    <Compile Include="Migrations\201803200123404_Start.cs" />
+    <Compile Include="Migrations\201803200123404_Start.Designer.cs">
+      <DependentUpon>201803200123404_Start.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Results.cs" />
@@ -227,18 +182,19 @@
     <Content Include="package.json" />
     <Content Include="data\surveyMap.json" />
     <Content Include="data\surveys.json" />
+    <Content Include=".babelrc" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\mobility-maturity-dashboard-dev - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\mobility-maturity-dashboard-dev - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\mobility-maturity-dashboard-uat - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\mobility-maturity-dashboard-uat - Web Deploy.pubxml" />
-    <Content Include="src\assets\welcome\bootstrap-4.0.0-alpha.6.zip" />
     <Content Include="src\data\welcome.json" />
     <Content Include="tsconfig.dev.json" />
     <Content Include="tsconfig.json" />
     <Content Include="typings.json" />
     <Content Include="typings\globals\jasmine\typings.json" />
     <Content Include="typings\globals\node\typings.json" />
+    <Content Include="src\data\copy.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>
@@ -250,6 +206,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Helpers\" />
+    <Folder Include="src\assets\" />
     <Folder Include="src\css\scss\" />
   </ItemGroup>
   <ItemGroup>
@@ -260,19 +217,19 @@
     <TypeScriptCompile Include="src\app\app.config.service.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\app.routing.ts" />
+    <TypeScriptCompile Include="src\app\directives\BoolQuestion.directive.ts" />
     <TypeScriptCompile Include="src\app\models\Question.ts" />
     <TypeScriptCompile Include="src\app\models\QuestionsMap.ts" />
     <TypeScriptCompile Include="src\app\models\Survey.ts" />
+    <TypeScriptCompile Include="src\app\services\survey.service.ts" />
+    <TypeScriptCompile Include="src\app\survey-admin\SurveyAdmin.component.ts" />
     <TypeScriptCompile Include="src\app\survey\survey.component.ts" />
     <TypeScriptCompile Include="src\app\survey\survey.module.ts" />
     <TypeScriptCompile Include="src\app\survey\survey.routing.ts" />
     <TypeScriptCompile Include="src\app\survey\participant\participant.component.ts" />
     <TypeScriptCompile Include="src\app\models\Profile.ts" />
     <TypeScriptCompile Include="src\app\services\copy.service.ts" />
-    <TypeScriptCompile Include="src\app\services\pdf.service.ts" />
     <TypeScriptCompile Include="src\app\welcome\welcome.component.ts" />
-    <TypeScriptCompile Include="src\environments\environment.prod.ts" />
-    <TypeScriptCompile Include="src\environments\environment.ts" />
     <TypeScriptCompile Include="src\main.dev.ts" />
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\polyfills.ts" />
@@ -282,8 +239,8 @@
     <TypeScriptCompile Include="typings\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803190158223_Start.resx">
-      <DependentUpon>201803190158223_Start.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803200123404_Start.resx">
+      <DependentUpon>201803200123404_Start.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

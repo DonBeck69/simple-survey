@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
-const logo = require( '../assets/ms-logo.svg');
+//const logo = require( '../assets/ms-logo.svg');
 //import * as logo from '../assets/ms-logo.svg';
 
 @Component({
@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
         private domSanitizer: DomSanitizer
     ) {
         //this.logoPath = this.domSanitizer.bypassSecurityTrustUrl(logo);
-        this.logoPath = logo;
+        //this.logoPath = logo;
         //console.log(this.logoPath);
 
     }

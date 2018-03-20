@@ -1,4 +1,8 @@
+
 export class Question {
+
+    public constructor() { }
+
     public Copy: string;
     public Type: string;
     public ValueType: string;

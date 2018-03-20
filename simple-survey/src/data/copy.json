@@ -1,5 +1,8 @@
 {
     "Copy":{
-        "Somthing": "Some random text"
+        "Somthing": "Some random text",
+        "SurveyAdmin": {
+            "Heading": "Admin the surveys"
+        }
     }
 }

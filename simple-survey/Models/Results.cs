@@ -12,6 +12,7 @@ namespace SimpleSurvey.Models
 
         public int ResultsId { get; set; }
         public int UserDataId  { get; set; }
+
         public string AnswersGiven { get; set; }
         public DateTime Started { get; set; }
         public DateTime Completed { get; set; }

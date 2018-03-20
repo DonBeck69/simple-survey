@@ -13,7 +13,7 @@ namespace SimpleSurvey.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201803190158223_Start"; }
+            get { return "201803200123404_Start"; }
         }
         
         string IMigrationMetadata.Source

@@ -15,8 +15,7 @@ export class CopyService {
     ) {
     this.Copy = Copy;
     this.WelcomeCopy = WelcomeCopy;
-    //this.appCo
-    //this.appConfig = AppConfig;
+
   }
 
   // private appConfig: AppConfig;

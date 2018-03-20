@@ -16,25 +16,26 @@ namespace SimpleSurvey.Migrations
                         AnswersGiven = c.String(),
                         Started = c.DateTime(nullable: false),
                         Completed = c.DateTime(nullable: false),
+                        Survey_SurveyId = c.Int(),
                     })
                 .PrimaryKey(t => t.ResultsId)
+                .ForeignKey("dbo.Surveys", t => t.Survey_SurveyId)
                 .ForeignKey("dbo.UserDatas", t => t.UserDataId, cascadeDelete: true)
-                .Index(t => t.UserDataId);
+                .Index(t => t.UserDataId)
+                .Index(t => t.Survey_SurveyId);
             
             CreateTable(
                 "dbo.Surveys",
                 c => new
                     {
                         SurveyId = c.Int(nullable: false, identity: true),
-                        UserId = c.Int(nullable: false),
                         SurveyName = c.String(),
-                        Description = c.String(),
+                        SurveyData = c.String(),
+                        Description = c.String(maxLength: 250),
                         Questions = c.String(),
-                        UserData_UserDataId = c.Int(),
+                        Created = c.DateTime(nullable: false),
                     })
-                .PrimaryKey(t => t.SurveyId)
-                .ForeignKey("dbo.UserDatas", t => t.UserData_UserDataId)
-                .Index(t => t.UserData_UserDataId);
+                .PrimaryKey(t => t.SurveyId);
             
             CreateTable(
                 "dbo.UserDatas",
@@ -49,9 +50,9 @@ namespace SimpleSurvey.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.Surveys", "UserData_UserDataId", "dbo.UserDatas");
             DropForeignKey("dbo.Results", "UserDataId", "dbo.UserDatas");
-            DropIndex("dbo.Surveys", new[] { "UserData_UserDataId" });
+            DropForeignKey("dbo.Results", "Survey_SurveyId", "dbo.Surveys");
+            DropIndex("dbo.Results", new[] { "Survey_SurveyId" });
             DropIndex("dbo.Results", new[] { "UserDataId" });
             DropTable("dbo.UserDatas");
             DropTable("dbo.Surveys");
