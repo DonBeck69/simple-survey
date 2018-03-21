@@ -1,11 +1,11 @@
 import { Component, OnInit } from "@angular/core";
-import { CopyService } from "../services/copy.service";
+import { CopyService } from "../../services/copy.service";
 
 @Component({
-    selector: "survey-admin",
-    templateUrl: "survey-admin.html"
+    selector: "survey-edit",
+    templateUrl: "survey-edit.html"
 })
-export class SurveyAdminComponent {
+export class SurveyEditComponent {
     public copy: any;
 
     constructor(

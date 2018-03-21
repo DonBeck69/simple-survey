@@ -1,18 +1,25 @@
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from "@angular/router";
+import { ModuleWithProviders } from "@angular/core";
 
-import { WelcomeComponent } from './welcome/welcome.component';
-import { SurveyComponent } from './survey/survey.component';
+import { WelcomeComponent } from "./welcome/welcome.component";
+import { SurveyComponent } from "./survey/survey.component";
+import { SurveyAdminComponent } from "./survey-admin/SurveyAdmin.component";
+import { SurveyAdminRouting } from "./survey-admin/SurveyAdminRouting";
 
 const APP_ROUTES: Routes = [
     {
-        path: '',
+        path: "",
         component: WelcomeComponent
     },
     {
-        path: 'assessment',
+        path: "survey",
         component: SurveyComponent,
-        //children: AssessmentRouting
+    },
+    {
+        path: "survey-admin",
+        component: SurveyAdminComponent,
+        children: SurveyAdminRouting
     }
 ];
 
-export const AppRouting = RouterModule.forRoot(APP_ROUTES);
+export const AppRouting: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);

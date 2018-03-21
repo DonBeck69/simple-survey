@@ -1,28 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import { CopyService } from '../services/copy.service';
-import { Router} from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { CopyService } from "../services/copy.service";
+import { Router} from "@angular/router";
 
 
 @Component({
-    selector: 'welcome',
-    templateUrl: './welcome.html'
+    selector: "welcome",
+    templateUrl: "./welcome.html"
 })
 
 
-export class WelcomeComponent implements OnInit{
+export class WelcomeComponent implements OnInit {
 
     constructor(
         private copyService: CopyService,
         private router: Router
-    ){}
+    ) {}
     public banner: any;
 
-    ngOnInit(){
+    ngOnInit(): void {
         this.banner = this.copyService.WelcomeCopy.Banner;
     }
 
-    newAssessment(){
-        this.router.navigate(['/assessment', 'employees']);
+    newAssessment(): void {
+        this.router.navigate(["/assessment", "employees"]);
     }
 
 }
