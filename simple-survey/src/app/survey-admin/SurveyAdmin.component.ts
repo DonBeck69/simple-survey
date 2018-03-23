@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { CopyService } from "../services/copy.service";
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: "survey-admin",
@@ -10,7 +11,14 @@ export class SurveyAdminComponent {
 
     constructor(
         private copyService: CopyService,
+        private router: Router,
+
     ) {
         this.copy = this.copyService.Copy.SurveyAdmin;
+    }
+
+    public AddQuestion(){
+        this.router.navigate(['/assessment', 'scenario']);
+
     }
 }

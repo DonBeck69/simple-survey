@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { Router, ActivatedRoute } from '@angular/router';
+
 import { CopyService } from "../../services/copy.service";
 
 @Component({
@@ -10,7 +12,15 @@ export class SurveyEditComponent {
 
     constructor(
         private copyService: CopyService,
+        private router: Router,
+
     ) {
         this.copy = this.copyService.Copy.SurveyAdmin;
+
+    }
+
+    public AddQuestion(){
+        this.router.navigate(['/assessment', 'scenario']);
+
     }
 }
