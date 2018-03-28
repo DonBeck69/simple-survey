@@ -17,14 +17,12 @@ var ParticipantComponent = (function () {
         this.copyService = copyService;
         this.router = router;
         this.route = route;
-    }
-    ParticipantComponent.prototype.ngOnInit = function () {
         this.copy = this.copyService.Copy;
-    };
+    }
     ParticipantComponent = __decorate([
         core_1.Component({
-            selector: 'participant',
-            templateUrl: './participant.html'
+            selector: "participant",
+            templateUrl: "./participant.html"
         }),
         __metadata("design:paramtypes", [copy_service_1.CopyService,
             router_1.Router,

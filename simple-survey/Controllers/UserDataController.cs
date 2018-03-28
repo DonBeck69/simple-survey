@@ -14,7 +14,7 @@ using SimpleSurvey.Models;
 
 namespace SimpleSurvey.Controllers
 {
-    public class UserDatasController : ApiController
+    public class UserDataController : ApiController
     {
         private DataContext db = new DataContext();
 

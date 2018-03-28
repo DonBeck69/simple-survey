@@ -10,24 +10,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var copy_service_1 = require("../services/copy.service");
-var router_1 = require("@angular/router");
-var WelcomeComponent = (function () {
-    function WelcomeComponent(copyService, router) {
+var copy_service_1 = require("../../services/copy.service");
+var QuestionEditComponent = (function () {
+    function QuestionEditComponent(copyService) {
         this.copyService = copyService;
-        this.router = router;
+        this.copy = this.copyService.Copy.SurveyAdmin;
     }
-    WelcomeComponent.prototype.AddQuestion = function () {
-        this.router.navigate(['/survey-admin', 'survey-admin']);
-    };
-    WelcomeComponent = __decorate([
+    QuestionEditComponent = __decorate([
         core_1.Component({
-            selector: "welcome",
-            templateUrl: "./welcome.html"
+            selector: "question-edit",
+            templateUrl: "question-edit.html"
         }),
-        __metadata("design:paramtypes", [copy_service_1.CopyService,
-            router_1.Router])
-    ], WelcomeComponent);
-    return WelcomeComponent;
+        __metadata("design:paramtypes", [copy_service_1.CopyService])
+    ], QuestionEditComponent);
+    return QuestionEditComponent;
 }());
-exports.WelcomeComponent = WelcomeComponent;
+exports.QuestionEditComponent = QuestionEditComponent;

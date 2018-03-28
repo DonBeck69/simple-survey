@@ -165,7 +165,7 @@
     <Compile Include="Controllers\ClaimsIdentityController.cs" />
     <Compile Include="Controllers\ResultsController.cs" />
     <Compile Include="Controllers\SurveysController.cs" />
-    <Compile Include="Controllers\UserDatasController.cs" />
+    <Compile Include="Controllers\UserDataController.cs" />
     <Compile Include="DataAccess\DataContext.cs" />
     <Compile Include="ExceptionFilter.cs" />
     <Compile Include="ExtentionMethods\ExtentionMethods.cs" />

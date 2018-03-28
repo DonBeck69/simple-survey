@@ -10,15 +10,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var BoolQuestionDirective = (function () {
-    function BoolQuestionDirective() {
+var router_1 = require("@angular/router");
+var copy_service_1 = require("../../services/copy.service");
+var SurveyEditComponent = (function () {
+    function SurveyEditComponent(copyService, router) {
+        this.copyService = copyService;
+        this.router = router;
+        this.copy = this.copyService.Copy.SurveyAdmin;
     }
-    BoolQuestionDirective = __decorate([
-        core_1.Directive({
-            selector: '[appBoolQuestion]'
+    SurveyEditComponent.prototype.AddQuestion = function () {
+        this.router.navigate(['/assessment', 'scenario']);
+    };
+    SurveyEditComponent = __decorate([
+        core_1.Component({
+            selector: "survey-edit",
+            templateUrl: "survey-edit.html"
         }),
-        __metadata("design:paramtypes", [])
-    ], BoolQuestionDirective);
-    return BoolQuestionDirective;
+        __metadata("design:paramtypes", [copy_service_1.CopyService,
+            router_1.Router])
+    ], SurveyEditComponent);
+    return SurveyEditComponent;
 }());
-exports.BoolQuestionDirective = BoolQuestionDirective;
+exports.SurveyEditComponent = SurveyEditComponent;

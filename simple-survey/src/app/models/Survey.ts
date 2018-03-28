@@ -1,11 +1,11 @@
 import { Question } from "./Question";
-//import * as moment from 'moment/min/moment.min';
 
 export class Survey {
-    public constructor (){
+    public constructor () {
         this.Questions = new Array<Question>();
     }
 
+    public SurveyId: number;
     public SurveyName: string;
     public SurveyData: string;
     public Description: string;

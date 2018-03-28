@@ -10,34 +10,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var copy_service_1 = require("../services/copy.service");
 var router_1 = require("@angular/router");
-var platform_browser_1 = require("@angular/platform-browser");
-var AppComponent = (function () {
-    function AppComponent(router, domSanitizer) {
+var SurveyAdminComponent = (function () {
+    function SurveyAdminComponent(copyService, router) {
+        this.copyService = copyService;
         this.router = router;
-        this.domSanitizer = domSanitizer;
-        this.name = 'Angular';
+        this.copy = this.copyService.Copy.SurveyAdmin;
     }
-    AppComponent.prototype.ngOnInit = function () {
-        this.router.events.subscribe(function (evt) {
-            if (!(evt instanceof router_1.NavigationEnd)) {
-                return;
-            }
-            window.scrollTo(0, 0);
-        });
+    SurveyAdminComponent.prototype.AddQuestion = function () {
+        this.router.navigate(['/assessment', 'scenario']);
     };
-    AppComponent.prototype.imgUrl = function (imgUrl) {
-        var url = this.domSanitizer.bypassSecurityTrustUrl(imgUrl);
-        return url;
-    };
-    AppComponent = __decorate([
+    SurveyAdminComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            templateUrl: './app.component.html',
+            selector: "survey-admin",
+            templateUrl: "survey-admin.html"
         }),
-        __metadata("design:paramtypes", [router_1.Router,
-            platform_browser_1.DomSanitizer])
-    ], AppComponent);
-    return AppComponent;
+        __metadata("design:paramtypes", [copy_service_1.CopyService,
+            router_1.Router])
+    ], SurveyAdminComponent);
+    return SurveyAdminComponent;
 }());
-exports.AppComponent = AppComponent;
+exports.SurveyAdminComponent = SurveyAdminComponent;

@@ -9,20 +9,17 @@ import { Router} from "@angular/router";
 })
 
 
-export class WelcomeComponent implements OnInit {
+export class WelcomeComponent {
 
     constructor(
         private copyService: CopyService,
         private router: Router
     ) {}
-    public banner: any;
 
-    ngOnInit(): void {
-        this.banner = this.copyService.WelcomeCopy.Banner;
-    }
 
-    newAssessment(): void {
-        this.router.navigate(["/assessment", "employees"]);
+    public Admin(): void {
+        this.router.navigate(["/survey-admin"]);
+
     }
 
 }
