@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from "@angular/router";
 
 import { CopyService } from "../../services/copy.service";
 
@@ -19,8 +19,8 @@ export class SurveyEditComponent {
 
     }
 
-    public AddQuestion(){
-        this.router.navigate(['/assessment', 'scenario']);
+    public AddQuestion(): void {
+        this.router.navigate(["/assessment", "scenario"]);
 
     }
 }

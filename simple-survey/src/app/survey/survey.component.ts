@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-//import { CopyService } from '../services/copy.service';
+import { Component, OnInit } from "@angular/core";
+import { CopyService } from "../services/copy.service";
 
 @Component({
-    selector: 'survey',
-    templateUrl: 'survey.html'
+    selector: "survey",
+    templateUrl: "survey.html"
 })
-export class SurveyComponent implements OnInit{
+export class SurveyComponent implements OnInit {
 
-    constructor(){}
+    constructor(
+        private copyService: CopyService,
+    ) {
+        this.copy = this.copyService.Copy.Survey;
+    }
 
-    ngOnInit(){
+    public copy: any;
+
+    ngOnInit(): void {
         // this.copyService.getCopy()
         //    .subscribe((response) => console.log(response) );
     }

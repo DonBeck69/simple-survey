@@ -21,9 +21,10 @@ export class CopyService {
   // private appConfig: AppConfig;
 
   // settings in app.config.ts
-  private getDeviceUrl = this.appConfig.apiUrl + "api/Device/";
+  // private getDeviceUrl = this.appConfig.apiUrl + "api/Device/";
   public Copy: any;
   public WelcomeCopy: any;
+  public SurveyCopy: any;
 
   /*
   public getDevices(): Promise<any> {

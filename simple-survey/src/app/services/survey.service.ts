@@ -36,7 +36,7 @@ export class SurveyService {
   private handleError(error: Response): Promise<any> {
     console.error(error); // for demo purposes only
     return Promise.reject(error);
-}
+    }
 /*
   //post assessment to api to generate results
   public PostResults(assessment: Assessment): Promise<Results> {
