@@ -19,7 +19,6 @@ var CopyService = (function () {
     function CopyService(http, appConfig) {
         this.http = http;
         this.appConfig = appConfig;
-        this.getDeviceUrl = this.appConfig.apiUrl + "api/Device/";
         this.Copy = Copy;
         this.WelcomeCopy = WelcomeCopy;
     }

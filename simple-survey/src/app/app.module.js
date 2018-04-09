@@ -14,6 +14,9 @@ var app_routing_1 = require("./app.routing");
 var app_component_1 = require("./app.component");
 var welcome_component_1 = require("./welcome/welcome.component");
 var survey_component_1 = require("./survey/survey.component");
+var participant_component_1 = require("./survey/participant/participant.component");
+var user_service_1 = require("./services/user.service");
+var survey_service_1 = require("./services/survey.service");
 var copy_service_1 = require("./services/copy.service");
 var app_config_service_1 = require("./app.config.service");
 var AppModule = (function () {
@@ -24,7 +27,8 @@ var AppModule = (function () {
             declarations: [
                 app_component_1.AppComponent,
                 survey_component_1.SurveyComponent,
-                welcome_component_1.WelcomeComponent
+                welcome_component_1.WelcomeComponent,
+                participant_component_1.ParticipantComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,
@@ -34,6 +38,8 @@ var AppModule = (function () {
             ],
             providers: [
                 copy_service_1.CopyService,
+                survey_service_1.SurveyService,
+                user_service_1.UserService,
                 app_config_service_1.AppConfig
             ],
             bootstrap: [app_component_1.AppComponent]

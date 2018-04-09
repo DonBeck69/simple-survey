@@ -9,6 +9,6 @@ export class Survey {
     public SurveyName: string;
     public SurveyData: string;
     public Description: string;
-    public Created: Date;
+    public Created: string;
     public Questions: Question[];
 }

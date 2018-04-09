@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Web.Http.Filters;
 
 
-namespace SimpleSurvey
+namespace SimpleSurveyApi
 {
     public class NotImplExceptionFilterAttribute : ExceptionFilterAttribute
     {

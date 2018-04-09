@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace SimpleSurvey.Models
+namespace SimpleSurveyApi
 {
     public class UserData
     {

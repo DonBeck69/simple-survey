@@ -6,9 +6,11 @@ import { FormsModule }   from "@angular/forms";
 import { SurveyAdminModule } from "./survey-admin/SurveyAdmin.module";
 import { AppRouting } from "./app.routing";
 import { AppComponent } from "./app.component";
-import { SurveyModule } from "./survey/survey.module";
 import { WelcomeComponent } from "./welcome/welcome.component";
 import { SurveyComponent } from "./survey/survey.component";
+import { ParticipantComponent } from "./survey/participant/participant.component";
+import { UserService } from "./services/user.service";
+import { SurveyService } from "./services/survey.service";
 import { CopyService } from "./services/copy.service";
 import { AppConfig } from "./app.config.service";
 
@@ -17,7 +19,8 @@ import { AppConfig } from "./app.config.service";
     declarations: [
         AppComponent,
         SurveyComponent,
-        WelcomeComponent
+        WelcomeComponent,
+        ParticipantComponent
     ],
     imports: [
         BrowserModule,
@@ -27,6 +30,8 @@ import { AppConfig } from "./app.config.service";
     ],
     providers: [
         CopyService,
+        SurveyService,
+        UserService,
         AppConfig
     ],
   bootstrap: [ AppComponent ]

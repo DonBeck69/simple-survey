@@ -5,14 +5,14 @@ const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+//const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 //minify and uglify
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const UglifyJSPlugin = config.optimization.minimize;// require('uglifyjs-webpack-plugin');
 
 //Ahead of time compilation
-const { AotPlugin } = require('@ngtools/webpack');
+const { AngularCompilerPlugin } = require('@ngtools/webpack');
 const { NoEmitOnErrorsPlugin, SourceMapDevToolPlugin, NamedModulesPlugin } = require('webpack');
 const nodeModules = path.join(process.cwd(), 'node_modules');
 
@@ -53,21 +53,19 @@ module.exports = {
                 loader: '@ngtools/webpack'
             },
             {
-                test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        { loader: 'css-loader', options: { scourceMap: isDev, minimize: true } },
-                        { loader: 'sass-loader', options: { scourceMap: isDev } }
-                    ]
-                })
-            },
-            /*
-            {
-                test: /\.(png|jpe?g|gif|svg|config|woff|woff2|ttf|eot|ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: 'file-loader'
-            },
-            */
+                test: /\.css$/,
+                use: 
+                [
+                    { 
+                        loader: 'style-loader',
+                        options: { sourceMap: isDev }
+                    },
+                    { 
+                        loader: 'css-loader',
+                        options: { minimize: true }
+                    }
+                ]
+            },            
             {
                 test: /\.(png|jpe?g|gif|config|ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 loader: 'url-loader',
@@ -134,7 +132,7 @@ module.exports = {
             compile: true,
             favicon: false,
             minify: false,
-            cache: true,
+            canpmche: true,
             showErrors: true,
             chunks: "all",
             excludeChunks: [],
@@ -197,7 +195,7 @@ module.exports = {
                 }
             }
         }),
-        new AotPlugin({
+        new AngularCompilerPlugin({
             "entryModule": path.resolve(__dirname, "src/app/app.module#AppModule"),
             "tsConfigPath": "tsconfig.json"
         })

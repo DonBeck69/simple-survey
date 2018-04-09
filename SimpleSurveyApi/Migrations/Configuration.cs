@@ -1,10 +1,10 @@
-namespace SimpleSurvey.Migrations
+namespace SimpleSurveyApi.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-    using SimpleSurvey;
+    using SimpleSurveyApi;
 
     internal sealed class Configuration : DbMigrationsConfiguration<DataContext>
     {

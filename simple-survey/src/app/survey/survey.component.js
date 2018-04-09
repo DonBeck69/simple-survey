@@ -10,17 +10,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var copy_service_1 = require("../services/copy.service");
 var SurveyComponent = (function () {
-    function SurveyComponent() {
+    function SurveyComponent(copyService) {
+        this.copyService = copyService;
+        this.copy = this.copyService.Copy.Survey;
     }
     SurveyComponent.prototype.ngOnInit = function () {
     };
     SurveyComponent = __decorate([
         core_1.Component({
-            selector: 'survey',
-            templateUrl: 'survey.html'
+            selector: "survey",
+            templateUrl: "survey.html"
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [copy_service_1.CopyService])
     ], SurveyComponent);
     return SurveyComponent;
 }());

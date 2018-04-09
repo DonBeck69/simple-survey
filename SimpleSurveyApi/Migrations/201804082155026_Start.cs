@@ -43,6 +43,8 @@ namespace SimpleSurvey.Migrations
                     {
                         UserDataId = c.Int(nullable: false, identity: true),
                         Data = c.String(),
+                        Created = c.DateTime(nullable: false),
+                        Modified = c.String(),
                     })
                 .PrimaryKey(t => t.UserDataId);
             

@@ -2,7 +2,7 @@ import {Injectable} from "@angular/core";
 import { HttpClient, HttpHeaders, HttpResponse } from "@angular/common/http";
 import * as moment from "moment/min/moment.min";
 import { AppConfig } from "../app.config.service";
-import { UserData } from "../models/UserData";
+import { User, Data } from "../models/UserData";
 import { Address } from "../models/Address";
 
 @Injectable()
@@ -13,45 +13,55 @@ export class UserService {
         private appConfig: AppConfig
     ) {}
 
+    public User: User;
+
     private userDataApiUrl = this.appConfig.apiUrl + "api/UserData/";
     // private assessmentApiUrl = this.appConfig.apiUrl + "api/Assessment/";
     private headers: HttpHeaders = new HttpHeaders({ "Content-Type": "application/json" });
 
-    public GetFredTheMan(UserDataId: number): UserData {
-        return new UserData({
+    public GetFredTheMan(): User {
+        let user: User = new User({
             UserDataId: null,
-            FirstName: "Fred",
-            LastName: "Theman",
-            Email: "Fred@Theman.qrk",
-            Address: new Address({
-                ApartmentNumber: "1",
-                City: "Fredsville",
-                Code: "F1234",
-                Country:"USA",
-                Region: "Washington",
-                StreetName: "Theman St",
-                StreetNumber: "1"
+            Created: null,
+            // -Modified: new Array<Date>(), <-- happens in the constructor.
+            Data: new Data({
+                FirstName: "Fred",
+                LastName: "Theman",
+                Email: "Fred@Theman.qrk",
+                Address: new Address({
+                    ApartmentNumber: "1",
+                    City: "Fredsville",
+                    Code: "F1234",
+                    Country:"USA",
+                    Region: "Washington",
+                    StreetName: "Theman St",
+                    StreetNumber: "1"
+                })
             })
         });
+
+        this.User = user;
+
+        return user;
     }
 
-    public PostUser(User: UserData): Promise<number> {
-        if (User.Created === undefined) {
-            User.Created = moment.utc().toDate();
+    public PostUser(user: User): Promise<number> {
+        if (user.Created === null) {
+            user.Created = moment.utc().toDate();
         }
 
-        User.Modified.push(moment.utc().toDate());
+        user.Modified.push(moment.utc().toDate());
 
-        return this.http.put<string>(this.userDataApiUrl, JSON.stringify(User), { headers: this.headers })
+        return this.http.post<number>(this.userDataApiUrl, user, { headers: this.headers })
         .toPromise()
         .then(response => {
-            User.UserDataId = parseInt(response, 10);
+            this.User.UserDataId = response;// parseInt(response, 10);
         })
         .catch(this.handleError);
     }
 
     private handleError(error: Response): Promise<any> {
-        // console.error(error);
+        console.log(error);
         return Promise.reject(error);
         }
 }

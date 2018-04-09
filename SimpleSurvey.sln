@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simple-survey", "simple-sur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{E51B528F-E2BE-426E-9937-4D9F408D6D08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleSurveyApi", "SimpleSurveyApi\SimpleSurveyApi.csproj", "{828E38F5-E552-4338-B3B9-E744B097D7B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E51B528F-E2BE-426E-9937-4D9F408D6D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E51B528F-E2BE-426E-9937-4D9F408D6D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E51B528F-E2BE-426E-9937-4D9F408D6D08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{828E38F5-E552-4338-B3B9-E744B097D7B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{828E38F5-E552-4338-B3B9-E744B097D7B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{828E38F5-E552-4338-B3B9-E744B097D7B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{828E38F5-E552-4338-B3B9-E744B097D7B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -17,8 +17,8 @@ var WelcomeComponent = (function () {
         this.copyService = copyService;
         this.router = router;
     }
-    WelcomeComponent.prototype.AddQuestion = function () {
-        this.router.navigate(['/survey-admin', 'survey-admin']);
+    WelcomeComponent.prototype.Admin = function () {
+        this.router.navigate(["/survey-admin"]);
     };
     WelcomeComponent = __decorate([
         core_1.Component({

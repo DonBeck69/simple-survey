@@ -18,8 +18,8 @@ var SurveyAdminComponent = (function () {
         this.router = router;
         this.copy = this.copyService.Copy.SurveyAdmin;
     }
-    SurveyAdminComponent.prototype.AddQuestion = function () {
-        this.router.navigate(['/assessment', 'scenario']);
+    SurveyAdminComponent.prototype.AddSurvey = function () {
+        this.router.navigate(["/survey-edit", "survey-edit"]);
     };
     SurveyAdminComponent = __decorate([
         core_1.Component({

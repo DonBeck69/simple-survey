@@ -5,9 +5,8 @@ using System.Web;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;
-using SimpleSurvey.Models;
 
-namespace SimpleSurvey
+namespace SimpleSurveyApi
 {
     public class DataContext : DbContext
     {

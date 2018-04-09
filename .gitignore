@@ -1,8 +1,9 @@
 ﻿/.vs
 /.vscode
-/DataAccess
 /simple-survey/obj
 /simple-survey/bin
+/SimpleSurveyApi/bin
+/SimpleSurveyApi/obj
 /UnitTests/bin
 /UnitTests/obj
 /packages

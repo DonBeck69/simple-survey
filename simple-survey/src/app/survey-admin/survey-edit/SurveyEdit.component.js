@@ -19,7 +19,7 @@ var SurveyEditComponent = (function () {
         this.copy = this.copyService.Copy.SurveyAdmin;
     }
     SurveyEditComponent.prototype.AddQuestion = function () {
-        this.router.navigate(['/assessment', 'scenario']);
+        this.router.navigate(["/assessment", "scenario"]);
     };
     SurveyEditComponent = __decorate([
         core_1.Component({

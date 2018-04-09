@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AppConfig = (function () {
     function AppConfig() {
-        this.apiUrl = 'https://localhost:51887/';
+        this.apiUrl = "http://localhost:59378/";
     }
     AppConfig = __decorate([
         core_1.Injectable()

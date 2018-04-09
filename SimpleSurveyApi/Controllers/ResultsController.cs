@@ -7,13 +7,16 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Web.Http.Cors;
 using System.Web.Http;
 using System.Web.Http.Description;
 using SimpleSurvey;
-using SimpleSurvey.Models;
 
-namespace SimpleSurvey.Controllers
+namespace SimpleSurveyApi.Controllers
 {
+    [RoutePrefix("api")]
+    [NotImplExceptionFilter]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ResultsController : ApiController
     {
         private DataContext db = new DataContext();
