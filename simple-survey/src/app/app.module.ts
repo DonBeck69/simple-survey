@@ -3,10 +3,11 @@ import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule }   from "@angular/forms";
 
-import { SurveyAdminModule } from "./survey-admin/SurveyAdmin.module";
+import { SurveyAdminComponent } from "./survey-admin/SurveyAdmin.component";
 import { AppRouting } from "./app.routing";
 import { AppComponent } from "./app.component";
 import { WelcomeComponent } from "./welcome/welcome.component";
+import { UserComponent } from "./user/User.component";
 import { SurveyComponent } from "./survey/survey.component";
 import { ParticipantComponent } from "./survey/participant/participant.component";
 import { UserService } from "./services/user.service";
@@ -19,6 +20,7 @@ import { AppConfig } from "./app.config.service";
     declarations: [
         AppComponent,
         SurveyComponent,
+        SurveyAdminComponent,
         WelcomeComponent,
         ParticipantComponent
     ],

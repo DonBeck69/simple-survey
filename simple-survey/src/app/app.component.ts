@@ -5,9 +5,11 @@ import { UserService } from "./services/user.service";
 import { User, Data } from "./models/UserData";
 import { Address } from "./models/Address";
 
+import "./../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 @Component({
     selector: "my-app",
-    templateUrl: "./app.component.html",
+    templateUrl: "./app.component.html"
 })
 export class AppComponent {
     private name: string = "Angular";
@@ -22,10 +24,13 @@ export class AppComponent {
     ) {
         this._user = userService.GetFredTheMan();
         this._userService = userService;
+
+        this._userService.GetUser("3");
+
     }
 
-    public PostFred(): void {
-        this._userService.PostUser(this._user);
+    public ShowUser(): void {
+        this.router.navigate(["/user"]);
     }
 
 

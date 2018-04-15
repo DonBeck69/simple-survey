@@ -4,7 +4,8 @@ import { ModuleWithProviders } from "@angular/core";
 import { WelcomeComponent } from "./welcome/welcome.component";
 import { SurveyComponent } from "./survey/survey.component";
 import { SurveyAdminComponent } from "./survey-admin/SurveyAdmin.component";
-import { SurveyAdminRouting } from "./survey-admin/SurveyAdminRouting";
+import { UserComponent } from "./user/User.component";
+
 
 const APP_ROUTES: Routes = [
     {
@@ -17,8 +18,11 @@ const APP_ROUTES: Routes = [
     },
     {
         path: "survey-admin",
-        component: SurveyAdminComponent,
-        children: SurveyAdminRouting
+        component: SurveyAdminComponent
+    },
+    {
+        path: "user",
+        component: UserComponent
     }
 ];
 

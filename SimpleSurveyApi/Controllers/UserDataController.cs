@@ -23,14 +23,17 @@ namespace SimpleSurveyApi.Controllers
         public UserDataController() { }
 
         // GET: api/UserDatas
-        public string Get()
-        {
-            return "UserData";
-        }
+        //public async Task<UserData> Get(int id)
+        //{
+        //    UserData userData = await db.UserData.FindAsync(id);
+
+
+        //    return user;
+        //}
 
         // GET: api/UserDatas/5
         [ResponseType(typeof(UserData))]
-        public async Task<IHttpActionResult> GetUserData(int id)
+        public async Task<IHttpActionResult> Get(int id)
         {
             UserData userData = await db.UserData.FindAsync(id);
             if (userData == null)
@@ -90,6 +93,7 @@ namespace SimpleSurveyApi.Controllers
                 //userData = JsonConvert.DeserializeObject<UserData>(userData);
                 db.UserData.Add(userData);
                 db.SaveChanges();
+                userId = userData.UserDataId;
             }
             catch (Exception ex)
             {

@@ -17,9 +17,5 @@ export class WelcomeComponent {
     ) {}
 
 
-    public Admin(): void {
-        this.router.navigate(["/survey-admin"]);
-
-    }
 
 }

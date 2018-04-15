@@ -45,6 +45,20 @@ export class UserService {
         return user;
     }
 
+    public GetUser(UserId: string): Promise<User> {
+        return this.http.get<User>(this.userDataApiUrl, { headers: this.headers, params: { "id": UserId } })
+        .toPromise()
+        .then(response => {
+            // console.log(response);
+            this.User = response;// parseInt(response, 10);
+            console.log(this.User);
+
+        })
+        .catch(this.handleError);
+
+
+    }
+
     public PostUser(user: User): Promise<number> {
         if (user.Created === null) {
             user.Created = moment.utc().toDate();

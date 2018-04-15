@@ -18,6 +18,7 @@ export class Data {
     public constructor(init?: Partial<Data>) {
         Object.assign(this, init);
     }
+    public DisplayName: string;
     public FirstName: string;
     public LastName: string;
     public Email: string;
