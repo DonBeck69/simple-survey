@@ -73,6 +73,20 @@ export class UserService {
         })
         .catch(this.handleError);
     }
+    public PutUser(user: User): Promise<number> {
+        if (user.Created === null) {
+            user.Created = moment.utc().toDate();
+        }
+
+        user.Modified.push(moment.utc().toDate());
+
+        return this.http.put<number>(this.userDataApiUrl, user, { headers: this.headers })
+        .toPromise()
+        .then(response => {
+            this.User.UserDataId = response;// parseInt(response, 10);
+        })
+        .catch(this.handleError);
+    }
 
     private handleError(error: Response): Promise<any> {
         console.log(error);
